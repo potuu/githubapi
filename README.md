@@ -1,10 +1,10 @@
 
-#GitHub User Info - Spring Boot Application
+# GitHub User Info - Spring Boot Application
 
-##Description
+## Description
 This is a simple Spring Boot application that interacts with the GitHub REST API to fetch and display basic information about a specified GitHub user. The application provides a web interface where users can input a GitHub username and retrieve details such as the user's name, company, location, public repositories, followers, and following count.
 
-##Features
+## Features
 Fetches and displays basic GitHub user information.
 Handles invalid usernames gracefully.
 Allows users to quit the application by entering specific commands (quit, exit).
@@ -16,7 +16,7 @@ Thymeleaf: Template engine used for rendering the web interface.
 GitHub REST API: External API used to fetch user data.
 Maven: Dependency management and build tool.
 
-##Setup and Installation
+## Setup and Installation
 Prerequisites
 Java 17 or higher
 Maven (for dependency management)
@@ -42,13 +42,13 @@ mvn spring-boot:run
 Open your web browser and go to:
 http://localhost:8080/
 
-##Usage
+## Usage
 1.On the home page, enter a GitHub username in the input field.
 2.Click the "Submit" button to retrieve the user's information.
 3.The details of the user will be displayed on the same page.
 4.To exit the application, enter quit or exit as the username and press the submit button.
 
-##Example
+## Example
 Username: potuu
 Name: adil
 Company: null
@@ -61,6 +61,6 @@ Output:
 
 
 
-##Error Handling
+## Error Handling
 If the username is not found, an appropriate error message will be displayed.
 The application handles network errors and invalid inputs gracefully.
