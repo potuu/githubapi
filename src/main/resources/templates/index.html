@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>GitHub Kullanıcı Bilgileri</title>
+</head>
+<body>
+<h1>GitHub Kullanıcı Bilgilerini Getir</h1>
+
+<form action="/getUserInfo" method="get">
+    <label for="username">Kullanıcı Adı:</label>
+    <input type="text" id="username" name="username" required>
+    <button type="submit">Gönder</button>
+</form>
+
+<div th:if="${user != null}">
+    <h2>Kullanıcı Bilgileri:</h2>
+    <pre th:text="${user.toString()}"></pre>
+</div>
+</body>
+</html>
