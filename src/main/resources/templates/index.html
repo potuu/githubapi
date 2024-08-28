@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <title>GitHub Kullanıcı Bilgileri</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Search</title>
 </head>
 <body>
-<h1>GitHub Kullanıcı Bilgilerini Getir</h1>
-
-<form action="/getUserInfo" method="get">
-    <label for="username">Kullanıcı Adı:</label>
-    <input type="text" id="username" name="username" required>
-    <button type="submit">Gönder</button>
+<h1>GitHub Search</h1>
+<form action="/search" method="get">
+    <label for="username">Search by Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter an username">
+    <br>
+    <label for="repository">Search by Repository link:</label>
+    <input type="text" id="repository" name="repositoryLink" placeholder="Enter a repo link">
+    <br>
+    <button type="submit">Search</button>
 </form>
 
-<div th:if="${user != null}">
-    <h2>Kullanıcı Bilgileri:</h2>
-    <pre th:text="${user.toString()}"></pre>
+<div>
+    <h2>Searching Results:</h2>
+    <p th:text="${result}"></p>
 </div>
 </body>
-</html>
